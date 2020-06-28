@@ -16,6 +16,7 @@
 // console.log(document.images);
 
 
+
 // 2. GETELEMENTBYID
 
 // console.log(document.getElementById('header-title'));
@@ -30,6 +31,7 @@
 // headerTitle.innerHTML = '<h3>Hellooo</h3>'; //  태그 수정이여서 글시도 스타일도 변경가
 // headerTitle.style.color = 'yellow';
 // header.style.borderBottom = 'solid 3px #000';
+
 
 
 // 3. GETELEMENTBYCLASSNAME
@@ -47,6 +49,7 @@
 // }
 
 
+
 // 4. GETELEMENTBYTAGNAME
 
 // let li = document.getElementsByTagName('li'); //  이 태그를 가진것 모두 배열에 담아 돌려준다.
@@ -62,7 +65,9 @@
 // }
 
 
+
 // 5. QUERYSELECTOR
+
 // let header = document.querySelector('#main-header'); // 첫번쨰꺼만 반환 querySelectorAll은 모두 반환
 // header.style.borderBottom = 'solid 4px red';
 //
@@ -82,19 +87,105 @@
 // secondItem.style.color = 'pink';
 
 
+
 // 6. QUERYSELECTORALL
-let titles = document.querySelectorAll('.title');
-console.log(titles);
-titles[0].textContent = "HELLO";
 
-let odd = document.querySelectorAll('li:nth-child(odd)'); // 짝수
-let even = document.querySelectorAll('li:nth-child(even)'); // 홀수
+// let titles = document.querySelectorAll('.title');
+// console.log(titles);
+// titles[0].textContent = "HELLO";
+//
+// let odd = document.querySelectorAll('li:nth-child(odd)'); // 짝수
+// let even = document.querySelectorAll('li:nth-child(even)'); // 홀수
+//
+// for(let i = 0; i < odd.length; i++) { // odd, even 둘다 길이 2이므로
+//   odd[i].style.backgroundColor = '#f4f4f4'
+//   even[i].style.backgroundColor = 'pink'
+// }
+//
 
-for(let i = 0; i < odd.length; i++) { // odd, even 둘다 길이 2이므로
-  odd[i].style.backgroundColor = '#f4f4f4'
-  even[i].style.backgroundColor = 'pink'
-}
 
+
+
+
+
+
+// TRAVERSING THE DOM //
+let itemList = document.querySelector('#items');
+// parentNode
+// console.log(itemList.parentNode);  //  부모노드
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+
+// parentElement
+// console.log(itemList.parentElement);  //  부모노드
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentElement.parentElement);
+
+
+// childNodes
+// console.log(itemList.childNodes); // 모든노드들이 인식되서 열리는태그, 닫히는태드 다 나와버린다.
+
+// console.log(itemList.children) // 필요한 children 들만 나온다.
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+
+// // FirstChild
+// console.log(itemList.firstChild); // 불필요한 첫번쨰가 인식되버린다.
+// // firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = "HELLO 1";
+
+
+// // lastChild
+// console.log(itemList.lastChild); // 불필요한 첫번쨰가 인식되버린다.
+// // lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = "HELLO 4";
+
+
+// nextSibling
+// console.log(itemList.nextSibling);// 불필요한 첫번쨰가 인식되버린다.
+// // nextElementSibling
+// console.log(itemList.nextElementSibling);
+
+
+// previousSibling
+// console.log(itemList.previousSibling); // 불필요한 첫번쨰가 인식되버린다.
+// // previousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green'
+
+
+// createElement
+
+// Create a div
+let newDiv = document.createElement('div');
+
+// Add class name
+newDiv.className= 'hello';
+
+// Add id name
+newDiv.id= 'hello1';
+
+// Add attribute - 태그 속성 추가
+newDiv.setAttribute('title', 'Hello Div');
+
+// Create text node
+let newDivText = document.createTextNode('Hello World');
+
+// Add text to div
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+console.log(newDiv)
+
+newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv, h1)
 
 
 
