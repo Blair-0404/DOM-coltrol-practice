@@ -132,27 +132,27 @@ let itemList = document.querySelector('#items');
 
 
 // // FirstChild
-// console.log(itemList.firstChild); // 불필요한 첫번쨰가 인식되버린다.
+// console.log(itemList.firstChild);
 // // firstElementChild
 // console.log(itemList.firstElementChild);
 // itemList.firstElementChild.textContent = "HELLO 1";
 
 
 // // lastChild
-// console.log(itemList.lastChild); // 불필요한 첫번쨰가 인식되버린다.
+// console.log(itemList.lastChild);
 // // lastElementChild
 // console.log(itemList.lastElementChild);
 // itemList.lastElementChild.textContent = "HELLO 4";
 
 
 // nextSibling
-// console.log(itemList.nextSibling);// 불필요한 첫번쨰가 인식되버린다.
+// console.log(itemList.nextSibling);
 // // nextElementSibling
 // console.log(itemList.nextElementSibling);
 
 
 // previousSibling
-// console.log(itemList.previousSibling); // 불필요한 첫번쨰가 인식되버린다.
+// console.log(itemList.previousSibling);
 // // previousElementSibling
 // console.log(itemList.previousElementSibling);
 // itemList.previousElementSibling.style.color = 'green'
